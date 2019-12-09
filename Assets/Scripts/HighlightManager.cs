@@ -86,7 +86,7 @@ public class HighlightManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (!_target.enabled) {
+        if (_target != null && !_target.enabled) {
             SetHighlightTarget(_target, false);
             _target = null;
             capsuleCollider.radius = 3f;
